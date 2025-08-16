@@ -47,7 +47,6 @@ JSON → Python     | Deserialization (decode)    | Rebuild the original object 
 
 ## Flow diagram (Mermaid)
 
-> GitHub renders Mermaid automatically in READMEs.
 
 ```mermaid
 flowchart LR
