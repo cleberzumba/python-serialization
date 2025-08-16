@@ -51,14 +51,20 @@ JSON → Python     | Deserialization (decode)    | Rebuild the original object 
 
 ```mermaid
 flowchart LR
-    A["Python object\n(dict, list, class, etc.)"]
-    B["Serialization\n(json.dumps, pickle.dump)"]
-    C["Standard format\n(JSON, bytes, base64)"]
-    D["Store/Transmit\n(file, API, queue, DB)"]
-    E["Deserialization\n(json.loads, pickle.load)"]
-    F["Python object\n(reconstructed)"]
+    A["Python object"]:::obj
+    B["Serialize"]:::ser
+    C["JSON / bytes / base64"]:::fmt
+    D["Store / Transmit<br/>(file, API, queue, DB)"]:::io
+    E["Deserialize"]:::des
+    F["Python object<br/>(reconstructed)"]:::obj
 
-    A --> B --> C --> D --> E --> F
+    A -- encode --> B --> C -- persist/send --> D -- receive/read --> E -- decode --> F
+
+    classDef obj fill:#E8F0FE,stroke:#3367D6,stroke-width:1.2px
+    classDef ser fill:#E6FFFB,stroke:#08979C,stroke-width:1.2px
+    classDef fmt fill:#FFF7E6,stroke:#FA8C16,stroke-width:1.2px
+    classDef io  fill:#F9F0FF,stroke:#722ED1,stroke-width:1.2px
+    classDef des fill:#E6FFFB,stroke:#08979C,stroke-width:1.2px
 ```
 
 ---
