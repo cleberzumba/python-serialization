@@ -49,17 +49,15 @@ JSON → Python     | Deserialization (decode)    | Rebuild the original object 
 
 > GitHub renders Mermaid automatically in READMEs.
 
-```mermaid
 flowchart LR
-    A[Python Object<br/>(dict, list, class, etc.)]
-    B[Serialization<br/>(json.dumps, pickle.dump)]
-    C[Standard Format<br/>(JSON, bytes, base64)]
-    D[Store/Transmit<br/>(file, API, queue, DB)]
-    E[Deserialization<br/>(json.loads, pickle.load)]
-    F[Python Object<br/>(reconstructed)]
+    A["Python object\n(dict, list, class, etc.)"]
+    B["Serialization\n(json.dumps, pickle.dump)"]
+    C["Standard format\n(JSON, bytes, base64)"]
+    D["Store/Transmit\n(file, API, queue, DB)"]
+    E["Deserialization\n(json.loads, pickle.load)"]
+    F["Python object\n(reconstructed)"]
 
     A --> B --> C --> D --> E --> F
-```
 
 ---
 
